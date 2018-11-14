@@ -8,4 +8,4 @@ if (!empty($_GET['token'])) {
 $token=!empty($token)?urlencode($token):'';
 $host = $_SERVER['HTTP_HOST'];
 ?>
-<a href="http://www.sso.com/login/logout?redirect=<?php echo $host;?>&token=<?php echo $token;?>">退出</a>
+<a href="http://user.yunindex.com/login/logout?redirect=<?php echo $host;?>&token=<?php echo $token;?>">退出</a>

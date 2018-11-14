@@ -8,7 +8,7 @@
  */
 //phpinfo();
 //exit;
-define('ROOT',$_SERVER["DOCUMENT_ROOT"]);   //程序根目录
+define('ROOT',dirname(__FILE__));   //程序根目录
 define('PATH', __DIR__ . '/');              //程序当前目录
 define('DEBUG', true);                      //调试模式
 

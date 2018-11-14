@@ -23,9 +23,9 @@ class Site extends Base{
 
 		$doc = new DOMDocument();
 		if(defined("CONFIG_PATH"))
-			$doc->load($_SERVER["DOCUMENT_ROOT"].CONFIG_PATH.'/site.xml');
+			$doc->load(ROOT.CONFIG_PATH.'/site.xml');
 		else
-			$doc->load($_SERVER["DOCUMENT_ROOT"]."/config/site.xml");
+			$doc->load(ROOT."/config/site.xml");
 
 		//print_r($doc);exit;
 		$this->xmlDoc = $doc;

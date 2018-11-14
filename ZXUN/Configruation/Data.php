@@ -20,10 +20,12 @@ class Data extends Base{
 		parent::Top();
 
 		$doc = new DOMDocument();
-		if(defined("CONFIG_PATH"))
-			$doc->load($_SERVER["DOCUMENT_ROOT"].CONFIG_PATH.'/data.xml');
-		else
-			$doc->load($_SERVER["DOCUMENT_ROOT"]."/config/data.xml");
+		if(defined("CONFIG_PATH")) {
+            $doc->load(ROOT . CONFIG_PATH . '/data.xml');
+        }
+		else {
+            $doc->load(ROOT . "/config/data.xml");
+        }
 		
 		$this->xmlDoc = $doc;
 		$this->xmlPath = new DOMXPath($doc);
